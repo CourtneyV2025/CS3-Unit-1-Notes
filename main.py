@@ -14,19 +14,34 @@ def main():
     # String formatting with f-strings
     #f"String literal {variable}""
     print(f"the type of the variable age is: {type_of_age}")
-    print(f"My age is 10 years: {age + 10}") 
+    print(f"My age in 10 years: {age + 10}") 
+    print() #linebreak
 
+    # Initialize args for function
+    ingredients_list = ["chocolate chips", "cinnamon", "flour", "sugar", "butter", "eggs"]
+    snickerdoodle = "mix everything and put in oven. there ya go!"
+    temperature = 300
 
+    # Call a function
+    bake_cookie(ingredients_list, snickerdoodle, temperature, name=recipe_name) 
 
-def bake_cookie(ingredients, instructions, temperature):
+    #Call a function with an optional argument 
+    bake_cookie(ingredients_list, snickerdoodle, temperature, "star")
+
+def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
+
     # Print the list of ingredients 
-
+    for item in ingredients:
+        print(item)
     # Print the oven temperature setting
+    print(f"Set the oven to {temperature} degrees Farenheight")
 
     # Print the instructions 
     print(instructions) 
+    #Tell them which cookie cutter to use 
+    print(f"Now cut your cookies with a {cutter} cookie cutter")
+    print()
 
-    print("String literal",teacher)
 if __name__ == "__main__":
     main()
 
