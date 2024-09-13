@@ -27,6 +27,17 @@ def main():
 
     #Call a function with an optional argument 
     bake_cookie(ingredients_list, snickerdoodle, temperature, "star")
+   
+#You can also use the argument's keyword. This helps with readability
+print(calculate_numbers(2, 3)) #goes with default, "add"
+print(calculate_numbers(2, 3, "subtract"))
+print(calculate_numbers(2,3,operation="subtract")) # specify keyword
+
+# Different ways to modify values while iterating 
+# Note that you can mix data types in the same list!!!!!!
+numbers = [5, 5, 6, 5.5, 7, 42, 70] 
+list_interation(numbers)
+
 
 def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
 
@@ -42,9 +53,32 @@ def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
     print(f"Now cut your cookies with a {cutter} cookie cutter")
     print()
 
+def calculate_numbers(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    elif operation == "subtract":
+        return x - y
+
+ # Let's try our new function. Remember, if we don't pass the operation keyword argument, the 
+    calculate_numbers(2,3)
+# You can pass a keyword argument as a normal positional argument 
+    calculate_numbers(2, 3, "subtract")
+
+
+def list_interation(list): 
+    # 1. Create a new list as you loop
+    new_list = []    
+    for item in list:
+        new_list.append(item * 2)
+    print(new_list)
+
+    #2. LIST COMPREHENSION
+    input_list = [item * 2 for item in list]
+    print(input_list)
+
+
 if __name__ == "__main__":
     main()
-
     # Declare Variables
     x = 42
     y = 3 /4 
