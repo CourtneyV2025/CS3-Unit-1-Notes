@@ -141,7 +141,7 @@ def dict_demo():
     print()
     print(costumes.get("cat"))
     print()
-    print(costumes["Mr. Titcomb"]) # doesn't exist
+    print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
 
 def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
 
