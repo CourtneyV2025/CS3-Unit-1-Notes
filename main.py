@@ -115,7 +115,6 @@ def set_demo():
     print(my_set.difference(other_set))
 
 
-
 def dict_demo():
     print()
     print("***DICT DEMO***") 
@@ -141,8 +140,18 @@ def dict_demo():
     print()
     print(costumes.get("cat"))
     print()
-    print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
+    # print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
+    print("Mr. Titcomb" in costumes)
 
+    # How to add items 
+    costumes["Mr. Titcomb"] = { 'pop': 1, 'school OK': True } 
+    
+    # Iterate through dictionary items 
+    print("ITERATE THROUGH DICTIONARY")
+    for costume in costumes: 
+         print(costume) # prints the KEYS
+         print(costumes[costume])
+         
 def bake_cookie(ingredients, instructions, temperature, cutter="circle"):
 
     # Print the list of ingredients 
